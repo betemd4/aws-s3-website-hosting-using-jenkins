@@ -12,9 +12,9 @@ pipeline {
          }      
          stage('Upload to AWS') {
               steps {
-                  withAWS(region:'us-east-1',credentials:'Jenkins-cred') {
+                  withAWS(region:'us-east-1',credentials:'Jenkins-Cred') {
                   sh 'echo "Uploading content with AWS creds"'
-                      s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'otavise.click')
+                      s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'misrakfoyatorganicbaltna.com')
                          s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'components.html', bucket:'otavise.click')
                        s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'main.bc58148c.js.gz', bucket:'otavise.click')
                        s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'assets', bucket:'otavise.click')
